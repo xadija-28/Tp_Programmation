@@ -24,6 +24,7 @@ int main()
     unsigned int       ui  = UINT_MAX;
 
     /* ----- Types entiers longs ----- */
+    /* Les suffixes L et LL indiquent que la constante est de type long ou long long */
     signed long int    sl  = -9000000000L;
     unsigned long int  ul  = ULONG_MAX;
 
@@ -32,6 +33,7 @@ int main()
     unsigned long long int ull = ULLONG_MAX;
 
     /* ----- Types réels (toujours signés) ----- */
+    /* Suffixes : f pour float, L pour long double. Sans suffixe, un réel est un double */
     float              f   = -3.14f;
     double             d   = -2.718281828459045;
     long double        ld  = -1.234567890123456789L;

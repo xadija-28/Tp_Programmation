@@ -1,5 +1,6 @@
+// Programme principal de l'exercice 2.3 : il appelle les fonctions de volume.c et surface.c
 #include <stdio.h>
-#include "sphere.h"
+#include "sphere.h"  // guillemets : fichier du projet ; < > : bibliothèque du système
 
 int main() {
     float rayon = 5.0;

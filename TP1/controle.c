@@ -10,7 +10,7 @@
 
 int main()
 {
-    int n;
+    int n;      /* déclaré ici car les trois boucles réutilisent la même variable */
 
     /* ===== Condition 1 : divisible par 4 mais pas par 6 (boucle for) ===== */
     printf("Divisibles par 4 mais pas par 6 :\n");
@@ -26,6 +26,7 @@ int main()
     printf("\n\n");
 
     /* ===== Condition 2 : pair et divisible par 8 (boucle while) ===== */
+    /* Un multiple de 8 est toujours pair : le test n % 2 est gardé pour suivre l'énoncé */
     printf("Pairs et divisibles par 8 :\n");
 
     n = 1;
@@ -43,7 +44,7 @@ int main()
     /* ===== Condition 3 : divisible par 5 ou 7 mais pas par 10 (boucle do..while) ===== */
     printf("Divisibles par 5 ou 7 mais pas par 10 :\n");
 
-    n = 1;
+    n = 1;                              /* il faut repartir de 1 : n vaut 1001 après la boucle précédente */
     do
     {
         if ((n % 5 == 0 || n % 7 == 0) && n % 10 != 0)

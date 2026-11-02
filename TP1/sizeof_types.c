@@ -1,7 +1,16 @@
+/*
+ * Fichier  : sizeof_types.c
+ * Objectif : Afficher la taille en octets de chaque type de base du C
+ * Auteurs  : BA Khadidiatou, MBAYE
+ */
+
 #include <stdio.h>
 
 int main()
 {
+    /* sizeof renvoie une valeur de type size_t : le format adapté est %zu.
+       Les tailles dépendent de la machine : c'est pour cela qu'on les affiche. */
+
     printf("char               : %zu octet(s)\n", sizeof(char));
     printf("signed char        : %zu octet(s)\n", sizeof(signed char));
     printf("unsigned char      : %zu octet(s)\n", sizeof(unsigned char));

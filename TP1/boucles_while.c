@@ -13,7 +13,10 @@ int main()
 
     /*
      * PRISE D'INITIATIVE (non demandée par l'énoncé) :
-     * tant que la taille n'est pas comprise entre 1 et 9, on redemande la saisie
+     * tant que la taille n'est pas comprise entre 1 et 9, on redemande la saisie.
+     * On utilise do..while car il faut lire la taille au moins une fois avant de la tester.
+     * Limite : si l'utilisateur tape une lettre, scanf ne la consomme pas et la boucle
+     * tourne sans fin. Il faut donc saisir un nombre.
      */
     do
     {
@@ -26,6 +29,7 @@ int main()
     } while (taille < 1 || taille >= 10);
     /* FIN DE LA PRISE D'INITIATIVE */
 
+    /* Avec while, on écrit nous-mêmes le départ et l'avancement que for regroupe sur une ligne */
     int ligne = 1;                      /* départ de la boucle extérieure */
     while (ligne <= taille)             /* condition de la boucle extérieure */
     {

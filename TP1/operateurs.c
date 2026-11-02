@@ -16,8 +16,8 @@ int main()
     printf("a + b  = %d\n", a + b);    /* addition */
     printf("a - b  = %d\n", a - b);    /* soustraction */
     printf("a * b  = %d\n", a * b);    /* multiplication */
-    printf("a / b  = %d\n", a / b);    /* division entière : 16 / 3 = 5 */
-    printf("a %% b  = %d\n", a % b);   /* modulo : reste de la division, 16 % 3 = 1 */
+    printf("a / b  = %d\n", a / b);    /* division entière car a et b sont des int : 16 / 3 = 5 */
+    printf("a %% b  = %d\n", a % b);   /* modulo : reste de la division, 16 % 3 = 1 (%% affiche un %) */
 
     /* ----- Opérateurs de comparaison : le résultat vaut 1 (vrai) ou 0 (faux) ----- */
     printf("a == b = %d\n", a == b);   /* égalité */

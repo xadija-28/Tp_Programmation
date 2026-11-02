@@ -13,7 +13,7 @@ int main()
 
     int bits[32];           /* tableau pour ranger les restes (32 bits maximum pour un int) */
     int nb_bits = 0;        /* nombre de bits obtenus */
-    int n = nombre;         /* copie de nombre, qu'on va diviser */
+    int n = nombre;         /* copie de nombre : on la divise, et nombre reste intact pour l'affichage */
 
     /* Cas particulier : 0 s'écrit 0 en binaire (la boucle ne tournerait pas) */
     if (n == 0)
@@ -21,6 +21,9 @@ int main()
         bits[0] = 0;
         nb_bits = 1;
     }
+
+    /* Le programme traite les entiers positifs ou nuls : pour un nombre négatif,
+       la boucle ne tournerait pas et rien ne serait affiché */
 
     /* Divisions successives par 2 : chaque reste est un bit,
        du bit de poids faible (à droite) vers le bit de poids fort (à gauche) */
@@ -31,7 +34,8 @@ int main()
         nb_bits++;
     }
 
-    /* Les bits ont été obtenus à l'envers : on les affiche du dernier au premier */
+    /* Les bits ont été obtenus à l'envers : c'est pour cela qu'on les a gardés
+       dans un tableau, afin de les afficher du dernier au premier */
     printf("%d en binaire : ", nombre);
     for (int i = nb_bits - 1; i >= 0; i--)
         printf("%d", bits[i]);

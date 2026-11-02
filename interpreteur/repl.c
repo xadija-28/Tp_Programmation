@@ -8,7 +8,7 @@
 
 int main()
 {
-    int continuer = 1; // Variable pour contrôler la boucle principale
+    int continuer = 1; // Variable pour contrôler la boucle principale (mise à 0 par "quit")
 
     // Boucle principale qui lit et traite les commandes utilisateur
     while (continuer)
@@ -30,6 +30,7 @@ int main()
         commande[strcspn(commande, "\n")] = 0;
 
         // Traite la commande en fonction de son contenu
+        // strcmp compare toute la chaîne ; strncmp seulement le début, car echo est suivi d'un texte
         if (strcmp(commande, "quit") == 0)
         {
             // Quitte le programme si la commande est "quit"
@@ -41,7 +42,7 @@ int main()
             // Traite la commande "echo" pour afficher du texte
             printf("Echo: ");
 
-            // Imprime la chaîne
+            // Imprime la chaîne à partir de l'indice 5 : "echo " occupe les cases 0 à 4
             for (int i = 5; commande[i] != '\0'; i++)
             {
                 printf("%c", commande[i]);
